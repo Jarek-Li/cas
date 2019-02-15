@@ -14,9 +14,6 @@ import org.springframework.cloud.autoconfigure.RefreshAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.EventListener;
 
-import java.util.Collection;
-import java.util.Collections;
-
 /**
  * This is {@link CouchbaseServiceRegistryTests}.
  *
@@ -43,11 +40,6 @@ public class CouchbaseServiceRegistryTests extends AbstractServiceRegistryTests 
 
     public CouchbaseServiceRegistryTests(final Class<? extends RegisteredService> registeredServiceClass) {
         super(registeredServiceClass);
-    }
-
-    @Parameterized.Parameters
-    public static Collection<Object> getTestParameters() {
-        return Collections.singletonList(RegexRegisteredService.class);
     }
 
     @Override
